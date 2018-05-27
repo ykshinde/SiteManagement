@@ -8,128 +8,118 @@
     tools:context=".LabourActivity"
     tools:showIn="@layout/activity_labour">
 
-<EditText
-    android:id="@+id/lab-contractor"
-    android:layout_width="377dp"
-    android:layout_height="52dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
-    android:ems="10"
-    android:hint="@string/contractor"
-    android:inputType="textPersonName"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/lab-dateOfWork" />
+    <EditText
+        android:id="@+id/lab-contractor"
+        android:layout_width="377dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/contractor"
+        android:inputType="textAutoCorrect|textAutoComplete|textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lab-dateOfWork" />
 
-<Button
-android:id="@+id/lab-cancel"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_marginStart="12dp"
-android:layout_marginTop="12dp"
-android:text="@string/cancel"
-app:layout_constraintStart_toEndOf="@+id/lab-addLabour"
-app:layout_constraintTop_toBottomOf="@+id/lab-otHours" />
+    <Button
+        android:id="@+id/lab-cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/cancel"
+        app:layout_constraintStart_toEndOf="@+id/lab-addLabour"
+        app:layout_constraintTop_toBottomOf="@+id/lab-otHours" />
 
-<EditText
-android:id="@+id/lab-no-work"
-android:layout_width="179dp"
-android:layout_height="43dp"
-android:layout_marginStart="8dp"
-android:layout_marginTop="8dp"
-android:ems="10"
-android:hint="@string/no_work"
-android:inputType="textPersonName"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintTop_toBottomOf="@+id/lab-Type" />
+    <EditText
+        android:id="@+id/lab-no-work"
+        android:layout_width="179dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/no_work"
+        android:inputType="textAutoCorrect|textAutoComplete|textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-<MultiAutoCompleteTextView
-android:id="@+id/lab-labourName"
-android:layout_width="256dp"
-android:layout_height="wrap_content"
-android:layout_marginStart="8dp"
-android:layout_marginTop="8dp"
-android:hint="@string/labourName"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintTop_toBottomOf="@+id/lab-skilled" />
+    <MultiAutoCompleteTextView
+        android:id="@+id/lab-labourName"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/labourName"
+        android:inputType="textAutoCorrect|textAutoComplete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lab-skilled" />
 
-<Button
-android:id="@+id/lab-addLabour"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_marginStart="8dp"
-android:layout_marginTop="12dp"
-android:text="@string/add"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintTop_toBottomOf="@+id/lab-otHours" />
+    <Button
+        android:id="@+id/lab-addLabour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lab-otHours" />
 
-<TextView
-android:id="@+id/lab-Type"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:layout_marginEnd="8dp"
-android:layout_marginStart="8dp"
-android:layout_marginTop="8dp"
-android:text="@string/labour"
-app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintHorizontal_bias="0.0"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/lab-dateOfWork"
+        android:layout_width="174dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/date"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lab-no-work"
+        app:layout_constraintTop_toTopOf="parent" />
 
-<EditText
-android:id="@+id/lab-dateOfWork"
-android:layout_width="174dp"
-android:layout_height="43dp"
-android:layout_marginEnd="8dp"
-android:layout_marginStart="8dp"
-android:layout_marginTop="8dp"
-android:ems="10"
-android:hint="@string/date"
-android:inputType="date"
-app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintStart_toEndOf="@+id/lab-no-work"
-app:layout_constraintTop_toBottomOf="@+id/lab-Type" />
+    <EditText
+        android:id="@+id/lab-days"
+        android:layout_width="89dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/days"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toEndOf="@+id/lab-labourName"
+        app:layout_constraintTop_toBottomOf="@+id/lab-skilled" />
 
-<EditText
-android:id="@+id/lab-days"
-android:layout_width="89dp"
-android:layout_height="43dp"
-android:layout_marginEnd="8dp"
-android:layout_marginStart="8dp"
-android:layout_marginTop="8dp"
-android:ems="10"
-android:hint="@string/days"
-android:inputType="number"
-app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintHorizontal_bias="0.764"
-app:layout_constraintStart_toEndOf="@+id/lab-labourName"
-app:layout_constraintTop_toBottomOf="@+id/lab-skilled" />
+    <Switch
+        android:id="@+id/lab-skilled"
+        android:layout_width="184dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:enabled="true"
+        android:hint="@string/skilled"
+        android:showText="true"
+        android:textOff="@string/non_skilled"
+        android:textOn="@string/skilled"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lab-contractor"
+        tools:targetApi="ice_cream_sandwich" />
 
-<Switch
-android:id="@+id/lab-skilled"
-android:layout_width="184dp"
-android:layout_height="18dp"
-android:layout_marginStart="8dp"
-android:layout_marginTop="8dp"
-android:hint="@string/skilled"
-android:textOff="@string/non_skilled"
-android:textOn="@string/skilled"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintTop_toBottomOf="@+id/lab-contractor"
-tools:targetApi="ice_cream_sandwich" />
-
-<EditText
-android:id="@+id/lab-otHours"
-android:layout_width="166dp"
-android:layout_height="48dp"
-android:layout_marginEnd="8dp"
-android:layout_marginTop="8dp"
-android:ems="10"
-android:hint="@string/hours"
-android:inputType="number"
-app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintTop_toBottomOf="@+id/lab-days" />
+    <EditText
+        android:id="@+id/lab-otHours"
+        android:layout_width="166dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hours"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lab-days" />
 
 </android.support.constraint.ConstraintLayout>

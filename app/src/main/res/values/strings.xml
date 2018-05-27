@@ -18,4 +18,5 @@
     <string name="machine">Machine</string>
     <string name="test">Test Block</string>
     <string name="title_activity_material">MaterialActivity</string>
+    <string name="title_activity_labour">LabourActivity</string>
 </resources>

@@ -17,7 +17,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/contractor"
-        android:inputType="textPersonName"
+        android:inputType="textAutoCorrect|textAutoComplete|textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,9 +41,9 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/no_work"
-        android:inputType="textPersonName"
+        android:inputType="textAutoCorrect|textAutoComplete|textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mat-Type" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <MultiAutoCompleteTextView
         android:id="@+id/mat-labourName"
@@ -52,6 +52,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:hint="@string/labourName"
+        android:inputType="textAutoCorrect|textAutoComplete"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mat-skilled" />
 
@@ -65,19 +66,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mat-otHours" />
 
-    <TextView
-        android:id="@+id/mat-Type"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/material"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/mat-dateOfWork"
         android:layout_width="174dp"
@@ -90,7 +78,7 @@
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/mat-no-work"
-        app:layout_constraintTop_toBottomOf="@+id/mat-Type" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/mat-days"
@@ -114,6 +102,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:hint="@string/skilled"
+        android:onClick="handleToggle"
+        android:showText="true"
         android:textOff="@string/non_skilled"
         android:textOn="@string/skilled"
         app:layout_constraintStart_toStartOf="parent"

@@ -28,7 +28,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ykshinde.sitemanagement.HomeActivity" />
         </activity>
-        <activity android:name=".LabourActivity"></activity>
+        <activity
+            android:name=".LabourActivity"
+            android:label="@string/title_activity_labour"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
